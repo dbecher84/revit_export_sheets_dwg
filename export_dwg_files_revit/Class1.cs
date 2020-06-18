@@ -78,17 +78,9 @@ namespace export_sheets_dwg_revit
                     }
             }
 
-            //Combine all view into string to show user what was exported
-            string fullList = "";
-            for (int i = 0; i < Sheetlist.Count; i++)
-            {
-                if (i < Sheetlist.Count - 1)
-                    fullList = fullList + Sheetlist[i] + ", ";
-                else
-                    fullList += Sheetlist[i];
-            }
-            //Display list of exported sheets
-            TaskDialog.Show("The following view were exported.", fullList);
+            //Display form listing sheets that were exported
+            var d = new Export_3d_views.ExportedList(Sheetlist);
+            d.ShowDialog();
 
             return Result.Succeeded;
 

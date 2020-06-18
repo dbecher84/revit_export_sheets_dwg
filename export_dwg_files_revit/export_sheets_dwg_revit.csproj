@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ExportedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportedList.Designer.cs">
+      <DependentUpon>ExportedList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="viewList.cs">
       <SubType>Form</SubType>
@@ -59,6 +65,11 @@
     <Compile Include="viewList.Designer.cs">
       <DependentUpon>viewList.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExportedList.resx">
+      <DependentUpon>ExportedList.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
