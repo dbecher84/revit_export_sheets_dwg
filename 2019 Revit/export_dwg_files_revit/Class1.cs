@@ -41,16 +41,16 @@ namespace export_sheets_dwg_revit
             viewCollector.OfClass(typeof(ViewSheet));
 
             //list of sheets to send to the windows form viewList
-            List<string> listSheetNames = new List<string>();
+            List<string> listSheetNums = new List<string>();
             foreach (ViewSheet view in viewCollector)
             {
-                listSheetNames.Add(view.Name);
+                listSheetNums.Add(view.SheetNumber);
             }
 
 
 
             //initate list of sheets form
-            var l = new Export_Sheets.viewList(listSheetNames);
+            var l = new Export_Sheets.viewList(listSheetNums);
             l.ShowDialog();
 
             //select save folder
@@ -69,17 +69,17 @@ namespace export_sheets_dwg_revit
             foreach (ViewSheet view in viewCollector)
             {
                 foreach (var item in l.ExportViewList)
-                    if (view.Name == item)
+                    if (view.SheetNumber == item)
                     {
                         List<ElementId> SheetlistID = new List<ElementId>();
                         SheetlistID.Add(view.Id);
-                        Sheetlist.Add(view.Name);
-                        doc.Export(folderPath, view.Name + ".dwg", SheetlistID,  opt);
+                        Sheetlist.Add(view.SheetNumber);
+                        doc.Export(folderPath, view.SheetNumber + ".dwg", SheetlistID,  opt);
                     }
             }
 
             //Display form listing sheets that were exported
-            var d = new Export_3d_views.ExportedList(Sheetlist);
+            var d = new Export_Sheets_Final.ExportedList(Sheetlist);
             d.ShowDialog();
 
             return Result.Succeeded;

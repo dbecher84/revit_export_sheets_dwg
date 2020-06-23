@@ -151,5 +151,10 @@ namespace Export_Sheets
                 listBox1.Items.Add(item);
             }
         }
+
+        private void viewList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

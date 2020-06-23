@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Export_3d_views
+namespace Export_Sheets_Final
 {
     public partial class ExportedList : Form
     {
@@ -29,6 +29,11 @@ namespace Export_3d_views
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExportedList_Load(object sender, EventArgs e)
         {
 
         }

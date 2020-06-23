@@ -1,4 +1,4 @@
-﻿namespace Export_3d_views
+﻿namespace Export_Sheets_Final
 {
     partial class ExportedList
     {
@@ -63,8 +63,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Name = "ExportedList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "List of Exported VIews";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "List of Exported Sheets";
+            this.Load += new System.EventHandler(this.ExportedList_Load);
             this.ResumeLayout(false);
 
         }
