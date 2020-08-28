@@ -11,11 +11,11 @@ using Form = System.Windows.Forms.Form;
 
 namespace Export_Sheets
 {
-    public partial class viewList : Form
+    public partial class sheetList : Form
     {
         List<string> fullList = new List<string>();
 
-        public viewList(List<string> list)
+        public sheetList(List<string> list)
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace Export_Sheets
             }
         }
 
-        public List<string> ExportViewList { get; set; }
+        public List<string> ExportSheetList { get; set; }
 
         //create view list to send for export
 
@@ -42,13 +42,13 @@ namespace Export_Sheets
                     //MessageBox.Show(text);
                     viewListWorking.Add(text);
                 }
-                ExportViewList = viewListWorking;
-                return ExportViewList;
+                ExportSheetList = viewListWorking;
+                return ExportSheetList;
             }
             else
             {
                 MessageBox.Show("List Box was empty");
-                return ExportViewList;
+                return ExportSheetList;
             }
         }
 
@@ -96,7 +96,7 @@ namespace Export_Sheets
 
         }
 
-        //add all 3d views to list for export
+        //add all sheets to list for export
         private void button1_Click(object sender, EventArgs e)
         {
             CreateViewList();

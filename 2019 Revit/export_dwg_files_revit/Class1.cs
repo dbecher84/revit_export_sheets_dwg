@@ -50,7 +50,7 @@ namespace export_sheets_dwg_revit
 
 
             //initate list of sheets form
-            var l = new Export_Sheets.viewList(listSheetNums);
+            var l = new Export_Sheets.sheetList(listSheetNums);
             l.ShowDialog();
 
             //select save folder
@@ -68,7 +68,7 @@ namespace export_sheets_dwg_revit
             //check if revit sheet is in list and export to DWG if it is
             foreach (ViewSheet view in viewCollector)
             {
-                foreach (var item in l.ExportViewList)
+                foreach (var item in l.ExportSheetList)
                     if (view.SheetNumber == item)
                     {
                         List<ElementId> SheetlistID = new List<ElementId>();

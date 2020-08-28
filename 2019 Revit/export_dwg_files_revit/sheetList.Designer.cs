@@ -1,6 +1,6 @@
 ﻿namespace Export_Sheets
 {
-    partial class viewList
+    partial class sheetList
     {
         /// <summary>
         /// Required designer variable.
