@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="exportSheets.cs" />
     <Compile Include="ExportedList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,5 +75,12 @@
       <DependentUpon>sheetList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ExportsheetsDWG.addin" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)\*.addin" "C:\ProgramData\Autodesk\Revit\Addins\2019"
+copy "$(ProjectDir)bin\debug\*.dll" "C:\ProgramData\Autodesk\Revit\Addins\2019"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
