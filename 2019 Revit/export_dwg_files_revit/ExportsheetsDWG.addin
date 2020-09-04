@@ -4,8 +4,8 @@
         <Assembly>export_dwg_files_revit.dll</Assembly>
         <AddInId>239BD853-36E4-461f-9171-C5ACEDA4E721</AddInId>
         <FullClassName>export_sheets_dwg_revit.exportSheets</FullClassName>
-        <Text>DWG-Export Sheets</Text>  
-        <VendorId>ADSK</VendorId>
-        <VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+        <Text>DWG-Export Sheets</Text>
+          <VendorId>Becher</VendorId>
+          <VendorDescription>Derek Becher, github: dbecher84</VendorDescription>
         </AddIn>
 </RevitAddIns>
