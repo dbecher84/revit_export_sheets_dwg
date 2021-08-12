@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>export_dwg_files_revit</RootNamespace>
     <AssemblyName>export_dwg_files_revit</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -90,7 +90,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)\*.addin" "C:\Users\Derek.Becher\AppData\Roaming\Autodesk\Revit\Addins\2020\DBToolBar"
-copy "$(ProjectDir)bin\debug\*.dll" "C:\Users\Derek.Becher\AppData\Roaming\Autodesk\Revit\Addins\2020\DBToolBar"</PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)\*.addin" "C:\Users\dbecher\Documents\GitHub\revit_toolbar\2021\Install Files\DBToolbar"
+copy "$(ProjectDir)bin\debug\*.dll" "C:\Users\dbecher\Documents\GitHub\revit_toolbar\2021\Install Files\DBToolbar"</PostBuildEvent>
   </PropertyGroup>
 </Project>

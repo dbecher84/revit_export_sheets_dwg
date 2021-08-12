@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Assembly>export_dwg_files_revit.dll</Assembly>
+    <AddInId>239BD853-36E4-461f-9171-C5ACEDA4E721</AddInId>
+    <FullClassName>export_sheets_dwg.exportSheets</FullClassName>
+    <Text>DWG-Export Sheets</Text>
+    <VendorId>Becher</VendorId>
+    <VendorDescription>Derek Becher, github: dbecher84</VendorDescription>
+  </AddIn>
+</RevitAddIns>
